@@ -1,7 +1,11 @@
 import React from 'react';
 import { Zap } from 'lucide-react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenPrivacy: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy }) => {
   return (
     <footer className="bg-duo-text text-white py-12 border-t-8 border-black/10">
       <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row justify-between items-center gap-8">
@@ -16,9 +20,21 @@ export const Footer: React.FC = () => {
         </div>
         
         <div className="flex gap-8 font-bold text-gray-400 text-sm">
-          <a href="#" className="hover:text-white transition-colors">关于我们</a>
-          <a href="#" className="hover:text-white transition-colors">隐私政策</a>
-          <a href="#" className="hover:text-white transition-colors">联系支持</a>
+          <a 
+            href="https://oldcircle.github.io/NOCTIS/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hover:text-white transition-colors"
+          >
+            关于我们
+          </a>
+          <button 
+            onClick={(e) => { e.preventDefault(); onOpenPrivacy(); }} 
+            className="hover:text-white transition-colors cursor-pointer"
+          >
+            隐私政策
+          </button>
+          <a href="mailto:qsjzqdnr@gmail.com" className="hover:text-white transition-colors">联系支持</a>
         </div>
         
         <div className="text-gray-500 text-xs font-bold">

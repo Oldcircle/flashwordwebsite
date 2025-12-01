@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Download, Check, X, Zap } from 'lucide-react';
+import { Smartphone, Download, Check, X, Zap, Cloud, WifiOff } from 'lucide-react';
 import { Button } from './Button';
 
 export const Hero: React.FC = () => {
@@ -50,10 +50,10 @@ export const Hero: React.FC = () => {
           
           <div className="mt-8 flex items-center justify-center md:justify-start gap-4 text-sm text-gray-400 font-bold">
             <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-duo-green rounded-full"></span> 免费无广告
+              <span className="p-1 bg-duo-blue rounded-full text-white"><Cloud size={10} strokeWidth={4} /></span> 支持云同步
             </span>
             <span className="flex items-center gap-1">
-              <span className="w-2 h-2 bg-duo-blue rounded-full"></span> 离线可用
+               <span className="p-1 bg-gray-300 rounded-full text-white"><WifiOff size={10} strokeWidth={4} /></span> 离线可用
             </span>
           </div>
         </div>
