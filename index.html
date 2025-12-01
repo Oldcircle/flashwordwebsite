@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>闪电单词 - 碎片时间，极速记忆</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              duo: {
+                green: '#58cc02',
+                'green-dark': '#46a302',
+                'green-light': '#89e219',
+                blue: '#1cb0f6',
+                'blue-dark': '#1899d6',
+                'blue-light': '#ddf4ff',
+                yellow: '#ffc800',
+                'yellow-dark': '#e5b400',
+                red: '#ff4b4b',
+                'red-dark': '#d33131',
+                gray: '#e5e5e5',
+                text: '#4b4b4b'
+              }
+            },
+            fontFamily: {
+              sans: ['Nunito', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 6s ease-in-out 3s infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+        /* Ensure that when clicking an anchor link, the content isn't hidden behind the sticky header (approx 80-100px) */
+        scroll-padding-top: 100px;
+      }
+      body {
+        font-family: 'Nunito', 'PingFang SC', sans-serif;
+        color: #4b4b4b;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
